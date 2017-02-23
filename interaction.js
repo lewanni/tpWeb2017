@@ -17,6 +17,7 @@ function DnD(canvas, interactor) {
 		this.x_init = mouseXY.x;
 		this.y_init = mouseXY.y;
     console.log(this.nb_action + " : Pression = x : " + this.x_init + " y : "+ this.y_init);
+    interactor.onInteractionStart(this);
   }.bind(this);
 
   this.deplacements = function(evt) {
@@ -26,6 +27,7 @@ function DnD(canvas, interactor) {
       this.x_final = mouseXY.x;
   		this.y_final = mouseXY.y;
       console.log(this.nb_action + " : Déplacement = x : " + this.x_final + " y : "+ this.y_final);
+      interactor.onInteractionUpdate(this);
     }
   }.bind(this);
 
@@ -36,6 +38,7 @@ function DnD(canvas, interactor) {
     this.y_final = mouseXY.y;
 		this.presse = false;
     console.log(this.nb_action + " : Relachement = x : " + this.x_final + " y : "+ this.y_final);
+    interactor.onInteractionEnd(this);
   }.bind(this);
 
 	// Associer les fonctions précédentes aux évènements du canvas.
