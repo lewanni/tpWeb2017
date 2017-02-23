@@ -33,3 +33,6 @@ function Ligne(x1, y1, x2, y2, couleur, epaisseur) {
   this.x2 = x2;
   this.y2 = y2;
 }
+
+Ligne.prototype = new Forme();
+Rectangle.prototype = new Forme();

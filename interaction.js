@@ -38,7 +38,11 @@ function DnD(canvas, interactor) {
     this.y_final = mouseXY.y;
 		this.presse = false;
     console.log(this.nb_action + " : Relachement = x : " + this.x_final + " y : "+ this.y_final);
+<<<<<<< HEAD
     interactor.onInteractionEnd(this);
+=======
+    interactor.onInteractionEnd(this)
+>>>>>>> branch 'master' of https://github.com/lewanni/tpWeb2017
   }.bind(this);
 
 	// Associer les fonctions précédentes aux évènements du canvas.
